@@ -1,0 +1,41 @@
+name: kid_guard
+description: 아이 이탈 방지 및 약속 장소 근접 찾기 앱 (GPS + BLE 하이브리드)
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # 상태 관리 / 저장
+  provider: ^6.1.2
+  shared_preferences: ^2.3.3
+
+  # 권한
+  permission_handler: ^11.3.1
+
+  # GPS
+  geolocator: ^13.0.2
+
+  # 블루투스: 스캔(central)은 flutter_blue_plus, 광고(peripheral)는 flutter_ble_peripheral
+  flutter_blue_plus: ^1.35.3
+  flutter_ble_peripheral: ^1.2.6
+
+  # 알림
+  flutter_local_notifications: ^18.0.1
+
+  # 원거리 GPS 동기화 (선택: Firebase 미설정 시 자동으로 블루투스 전용 모드로 동작)
+  firebase_core: ^3.8.1
+  cloud_firestore: ^5.6.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
